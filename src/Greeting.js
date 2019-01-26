@@ -1,14 +1,16 @@
 import React from 'react'
 
-const Greeting = props => {
-    return (
-      <div> {
-        props.color
-          ? `My name is ${props.name} and my favourite color is ${props.color}`
-          : `My name is ${props.name}`
-      }
-      </div>
-    )
-  }
-
-  export default Greeting
+class Greeting extends React.Component {
+    render() {
+        const { name, color } = this.props
+        return (
+            <div> {
+                color
+                    ? `Hi, my name is ${name} and my favourite color is ${color}`
+                    : `Hi, my name is ${name}`
+            }
+            </div>
+        )
+    }
+}
+export default Greeting
